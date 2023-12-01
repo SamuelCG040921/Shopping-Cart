@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Clothing Shop</title>
+</head>
+<body>
+    <header>
+        <h1 id="title">Clothing Shop</h1>
+        <div id="options">
+            <div class="searchBox">
+
+                <input id="searchInput" type="text" name="" placeholder="Busca lo que quieras!">
+                <button class="searchButton" href="#">
+                       
+                      
+    
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
+      <g clip-path="url(#clip0_2_17)">
+        <g filter="url(#filter0_d_2_17)">
+          <path d="M23.7953 23.9182L19.0585 19.1814M19.0585 19.1814C19.8188 18.4211 20.4219 17.5185 20.8333 16.5251C21.2448 15.5318 21.4566 14.4671 21.4566 13.3919C21.4566 12.3167 21.2448 11.252 20.8333 10.2587C20.4219 9.2653 19.8188 8.36271 19.0585 7.60242C18.2982 6.84214 17.3956 6.23905 16.4022 5.82759C15.4089 5.41612 14.3442 5.20435 13.269 5.20435C12.1938 5.20435 11.1291 5.41612 10.1358 5.82759C9.1424 6.23905 8.23981 6.84214 7.47953 7.60242C5.94407 9.13789 5.08145 11.2204 5.08145 13.3919C5.08145 15.5634 5.94407 17.6459 7.47953 19.1814C9.01499 20.7168 11.0975 21.5794 13.269 21.5794C15.4405 21.5794 17.523 20.7168 19.0585 19.1814Z" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" shape-rendering="crispEdges"></path>
+        </g>
+      </g>
+      <defs>
+        <filter id="filter0_d_2_17" x="-0.418549" y="3.70435" width="29.7139" height="29.7139" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+          <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+          <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></feColorMatrix>
+          <feOffset dy="4"></feOffset>
+          <feGaussianBlur stdDeviation="2"></feGaussianBlur>
+          <feComposite in2="hardAlpha" operator="out"></feComposite>
+          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"></feColorMatrix>
+          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2_17"></feBlend>
+          <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2_17" result="shape"></feBlend>
+        </filter>
+        <clipPath id="clip0_2_17">
+          <rect width="28.0702" height="28.0702" fill="white" transform="translate(0.403503 0.526367)"></rect>
+        </clipPath>
+      </defs>
+    </svg>
+                         
+    
+                </button>
+            </div>
+            <ul class="menu-h">
+              <li>
+                <a href="" class="filter">Filtrar</a>
+                <ul class="menu-v">
+                  <li><a href="#" onclick="filterByCategory('Todo')">Todo</a></li>
+                  <li><a href="#" onclick="filterByCategory('Camisetas')">Camisetas</a></li>
+                  <li><a href="#" onclick="filterByCategory('Jeans')">Jeans</a></li>
+                  <li><a href="#" onclick="filterByCategory('Blusas')">Blusas</a></li>
+                  <li><a href="#" onclick="filterByCategory('Gorras')">Gorras</a></li>
+                  <li><a href="#" onclick="filterByCategory('Shorts')">Shorts</a></li>
+                  <li><a href="#" onclick="filterByCategory('Sacos')">Sacos</a></li>
+                  <li><a href="#" onclick="filterByCategory('Vestidos')">Vestidos</a></li>
+                  <li><a href="#" onclick="filterByCategory('Faldas')">Faldas</a></li>
+                  <li><a href="#" id="filter-asc">Precio ascendente</a></li>
+                  <li><a href="#" id="filter-desc">Precio descendente</a></li>
+                </ul>
+              </li>
+            </ul>
+    
+            
+            
+            <button id="create-product">Crear un producto</button>
+            <button id="modify-product">Modificar un producto</button>
+            </select>
+        </div>
+    </header>
+    <section id="welcome">
+        <img id="clothes" src="./images/clothes.png" alt="clothes">
+        <div id="info">
+            <h2>
+                ¡Bienvenido!
+            </h2>
+            <p>
+                Aca en clothing shop tendras la oportunidad de encontrar gran variedad de prendas de vestir tanto de hombre como para mujer, encontraras camisetas, pantalones, blusas, chaquetas, accesorios, correas, medias y entre muchas otras cosas mas, siempre prefieremos, ¡somos tu mejor opcion!.
+            </p>
+        </div>
+    </section>
+    <div class="title-cont">
+      <h2 id="title2">Todos nuestros productos</h2>
+      <div class="buttons-filter">
+       
+      </div>
+    </div>
+    <main id="cards">
+
+    </main>
+    <section class="modal">
+      <div class="modal-container">
+        <label for="input-sku">SKU:</label>
+        <input type="text" id="input-sku" name="input-sku" required>  
+        <label for="input-name">Nombre:</label>
+        <input type="text" id="input-name" name="input-name" required>  
+        <label for="input-img">URL de la imagen:</label>
+        <input type="text" id="input-img" name="input-img" required>  
+        <label for="input-price">Precio:</label>
+        <input type="text" id="input-price" name="input-price" required>  
+        <label for="input-description">Descripcion:</label>
+        <input type="text" id="input-description" name="input-description" required>  
+        <label for="input-stock">Stock:</label>
+        <input type="text" id="input-stock" name="input-stock" required>  
+        <label for="input-category">Categoria:</label>
+        <input type="text" id="input-category" name="input-category" required>
+        <button id="close-modal">Cerrar modal</button>  
+        <button id="save-product">Guardar producto</button>
+      </div>
+    </section>
+    <section class="modal-modify">
+      <div class="modal-modify-container">
+        <label for="input-sku">Ingrese el SKU del producto a modificar:</label>
+        <input type="text" id="input-sku2" name="input-sku" required>  
+        <label for="input-name">Nombre:</label>
+        <input type="text" id="input-name2" name="input-name" required>  
+        <label for="input-img">URL de la imagen:</label>
+        <input type="text" id="input-img2" name="input-img" required>  
+        <label for="input-price">Precio:</label>
+        <input type="text" id="input-price2" name="input-price" required>  
+        <label for="input-description">Descripcion:</label>
+        <input type="text" id="input-description2" name="input-description" required>  
+        <label for="input-stock">Stock:</label>
+        <input type="text" id="input-stock2" name="input-stock" required>  
+        <label for="input-category">Categoria:</label>
+        <input type="text" id="input-category2" name="input-category" required>
+        <button id="close-modal-modify">Cerrar modal</button>
+        <button id="update-product">Actualizar producto</button>
+      </div>
+    </section>
+    
+    <div id="cart">
+      <!-- Área para mostrar los productos en el carrito -->
+      <div class="cart-items" id="cart-items">
+        <!-- Los productos agregados se mostrarán aquí -->
+      </div>
+    
+      <!-- Total y botones de acción -->
+      <div class="cart-summary">
+        <h2>Resumen del Carrito</h2>
+        <p>Total: <span id="cart-total">$0</span></p>
+        <button id="empty-cart">Vaciar Carrito</button>
+        <button id="checkout">Checkout</button>
+      </div>
+    </div>
+    <script src="./app.js"></script>
+    <script src="./products.js"></script>
+    <script src="./searchbar.js"></script>
+</body>
+</html>
